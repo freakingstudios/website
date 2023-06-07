@@ -12,16 +12,21 @@
             width: 60px;
             height: 60px;
             background-color: #25d366;
-            color: #fff;
             border-radius: 50%;
             text-align: center;
             line-height: 60px;
-            font-size: 30px;
+            font-size: 0;
             z-index: 9999;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        
+
+        .whatsapp-icon img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+
         .whatsapp-icon:hover {
             background-color: #128c7e;
         }
@@ -31,7 +36,9 @@
     <h1>Welcome to My Website</h1>
     
     <!-- Floating WhatsApp Icon -->
-    <a class="whatsapp-icon" href="https://wa.me/1234567890" target="_blank">+</a>
+    <a class="whatsapp-icon" href="https://wa.me/1234567890" target="_blank">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
     
     <!-- Rest of your HTML content -->
     <p>Some text goes here...</p>

@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import openai
 
 app = Flask(__name__)
-openai.api_key = 'YOUR_API_KEY'  # Replace with your actual API key
+openai.api_key = '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'  # Replace with your actual API key
 
 def generate_response(message):
     response = openai.Completion.create(

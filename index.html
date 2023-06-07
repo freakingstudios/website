@@ -1,39 +1,26 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-    <title>ChatGPT Demo</title>
+    <title>WhatsApp Widget Example</title>
+    <!-- Add CSS styles if needed -->
+    <style>
+        /* Example CSS styles for the WhatsApp widget */
+        .whatsapp-widget {
+            background-color: #25d366;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>ChatGPT Demo</h1>
-    <div id="chat-window"></div>
-    <input type="text" id="user-input" placeholder="Type your message..." />
-    <button onclick="sendMessage()">Send</button>
-
-    <script>
-        const chatWindow = document.getElementById('chat-window');
-        const userInput = document.getElementById('user-input');
-
-        function displayMessage(message, sender) {
-            const messageElement = document.createElement('p');
-            messageElement.textContent = `${sender}: ${message}`;
-            chatWindow.appendChild(messageElement);
-        }
-
-        function sendMessage() {
-            const userMessage = userInput.value;
-            displayMessage(userMessage, 'User');
-            userInput.value = '';
-
-            fetch('/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `user_message=${userMessage}`
-            })
-            .then(response => response.json())
-            .then(data => displayMessage(data.message, 'ChatGPT'));
-        }
-    </script>
+    <h1>Welcome to My Website</h1>
+    
+    <!-- WhatsApp Widget -->
+    <a class="whatsapp-widget" href="https://wa.me/1234567890" target="_blank">Chat on WhatsApp</a>
+    
+    <!-- Rest of your HTML content -->
+    <p>Some text goes here...</p>
 </body>
 </html>
